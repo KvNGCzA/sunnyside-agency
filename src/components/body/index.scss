@@ -3,7 +3,8 @@
 .main {
   .first {
     align-items: flex-start;
-    background: url('../../assets/images/image-header.jpg') no-repeat center center;
+    background: url('../../assets/images/image-header.jpg') no-repeat center
+      center;
     background-size: cover;
     display: flex;
     height: 100vh;
@@ -16,12 +17,48 @@
       margin-top: 13%;
       position: absolute;
 
+      .arrow-down, h1 {
+        animation-name: bounce;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform-origin: bottom;
+      }
+
+      .arrow-down {
+        animation-duration: 2s;
+      }
+      
+      h1 {
+        animation-duration: 2.5s;
+      }
+
       h1 {
         font-weight: 900;
         font-size: 3.3em;
         letter-spacing: 0.17em;
         margin-bottom: 1.8em;
         text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+}
+
+@media only screen and (max-width: 780px) {
+  .main {
+    .first {
+
+      .floating-parts {
+        margin-top: 9em;
+
+        h1 {
+          font-size: 2em;
+        }
       }
     }
   }

@@ -21,6 +21,7 @@ const displayCards = [
       image: imageTransform,
     },
     'key-001',
+    'reverse',
   ],
   [
     {
@@ -52,12 +53,20 @@ const displayCards = [
   ],
 ];
 
+const scrollOutOfLandingView = () => {
+  window.scrollTo({
+    left: 0,
+    top: window.innerHeight,
+    behavior: 'smooth',
+  });
+};
+
 const Body = () => (
   <div className='main'>
     <div className='first'>
       <div className='floating-parts'>
         <h1 className='header-text'>We are creatives</h1>
-        <ArrowDown />
+        <ArrowDown className='arrow-down' onClick={scrollOutOfLandingView} />
       </div>
     </div>
 

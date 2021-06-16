@@ -53,7 +53,7 @@ const Cards = ({ displayCard }) => {
   const [first, second] = displayCard;
 
   return (
-    <div className='cards-parent'>
+    <div className={`cards-parent ${displayCard[3] ? displayCard[3] : ''}`}>
       {renderCard(first)}
       {renderCard(second)}
     </div>
