@@ -1,0 +1,28 @@
+@import '../../assets/_colors.scss';
+
+.main {
+  .first {
+    align-items: flex-start;
+    background: url('../../assets/images/image-header.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    .floating-parts {
+      color: $white;
+      margin-top: 13%;
+      position: absolute;
+
+      h1 {
+        font-weight: 900;
+        font-size: 3.3em;
+        letter-spacing: 0.17em;
+        margin-bottom: 1.8em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

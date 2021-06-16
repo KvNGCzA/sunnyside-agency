@@ -1,0 +1,90 @@
+@import '../../assets/_colors.scss';
+
+.cards-parent {
+  display: flex;
+  height: 38em;
+
+  .image-card,
+  .text-card,
+  .mixed-card {
+    flex: 1;
+  }
+
+  .text-card {
+    align-items: center;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: $dark_blue;
+
+    .wrapper {
+      width: 62%;
+
+      h2 {
+        font-size: 3em;
+        font-weight: 900;
+        margin-bottom: 0.8em;
+      }
+
+      p {
+        font-size: 18px;
+        color: $dark_grayish_blue;
+        margin-bottom: 2.5em;
+      }
+
+      button {
+        background: transparent;
+        border: 0;
+        color: $dark_blue;
+        font-weight: 900;
+        font-size: 18px;
+        outline: none !important;
+        position: relative;
+        text-transform: uppercase;
+
+        .button-border {
+          bottom: -0.1em;
+          border-radius: 1em;
+          height: 0.5em;
+          left: -5%;
+          opacity: 0.3;
+          position: absolute;
+          width: 110%;
+          background-color: color;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          .button-border {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .mixed-card {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .content {
+      width: 52%;
+      margin-bottom: 4em;
+      color: $dark_blue;
+
+      h2 {
+        margin-bottom: 1em;
+        font-weight: 900;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

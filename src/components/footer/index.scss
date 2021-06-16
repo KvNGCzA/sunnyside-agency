@@ -1,0 +1,41 @@
+@import '../../assets/_colors.scss';
+
+footer {
+  background-color: $footer;
+  padding: 5em 0;
+
+  .logo {
+    margin-bottom: 2em;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 4em;
+
+    li {
+      display: inline-block;
+      margin: 0 2em;
+      color: $dark_moderate_cyan;
+
+      &:hover {
+        cursor: pointer;
+        color: $white;
+      }
+    }
+  }
+
+  .socials {
+    margin-bottom: 0;
+
+    li {
+      margin: 0 1em;
+
+      .social-icon {
+        transition-duration: 0.3s;
+        &:hover {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
